@@ -8,7 +8,8 @@ namespace _0sandXs
         {
             Console.WriteLine("Hello World!");
 
-            // Board b = new Board();
+              Board b = new Board();
+            b.displayBoard();
 
         }
     }
