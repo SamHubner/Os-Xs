@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks.Dataflow;
 
 namespace _0sandXs
 {
@@ -8,8 +9,19 @@ namespace _0sandXs
         {
             Console.WriteLine("Hello World!");
 
-              Board b = new Board();
-            b.displayBoard();
+              Board one = new Board();
+            one.displayBoard();
+
+            Player a = new Player();
+            Player b = new Player();
+
+            a.person();
+            b.person();
+
+            a.symbol("X");
+            b.symbol("O");
+
+            one.checkwin();
 
         }
     }
