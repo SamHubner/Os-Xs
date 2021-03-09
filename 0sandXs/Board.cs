@@ -37,11 +37,11 @@ namespace _0sandXs
             Console.WriteLine(board[6] + "|" + board[7] + "|" + board[8]);
         }
 
-        public bool addCounter(int player, int position)
-        {
-            board[position] =
+      //  public bool addCounter(int player, int position)
+       // {
+         //   board[position] =
 
-        }
+      //  }
 
         public int checkwin()
         {
@@ -49,6 +49,7 @@ namespace _0sandXs
             // 1- Player 1 wins
             // 2 - Player 2 wins
             // 3 - Draw
+            int x = 1;
 
             if(board[0]=="X" && board[4]=="X" && board[8] == "X")
             {
@@ -117,6 +118,7 @@ namespace _0sandXs
             {
                 Console.WriteLine("player 2 wins");
             }
+            return x;
 
         }
 
