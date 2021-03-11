@@ -20,7 +20,7 @@ namespace _0sandXs
 
             a.symbol("X");
             b.symbol("O");
-
+            gjkljdfkl
             one.checkwin();
 
         }
