@@ -7,29 +7,25 @@ namespace _0sandXs
 {
     class Player
     {
-        private string Character;
+        public string Character;
         static int number = 0;
 
 
-        public int person()
+        public string newPerson()
         {
             int playerNo = number;
-            number = number++;
-            return playerNo;
-        }
 
-
-        public string symbol(string ch)
-        {
-            if(ch == "X" || ch == "O")
+            if(playerNo == 0)
             {
-            Character = ch;
+                Character = "O";
             }
-            else
+            if (playerNo == 1
+                )
             {
-                Console.WriteLine("invalid character");
-            } 
+                Character = "X";
+            }
 
+            number = number++;
             return Character;
         }
     }

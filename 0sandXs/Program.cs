@@ -15,12 +15,9 @@ namespace _0sandXs
             Player a = new Player();
             Player b = new Player();
 
-            a.person();
-            b.person();
+            a.newPerson();
+            b.newPerson();
 
-            a.symbol("X");
-            b.symbol("O");
-            gjkljdfkl
             one.checkwin();
 
         }
