@@ -19,14 +19,18 @@ namespace _0sandXs
             {
                 Character = "O";
             }
-            if (playerNo == 1
-                )
+            if (playerNo == 1)
             {
                 Character = "X";
             }
 
             number = number++;
             return Character;
+        }
+
+        public int move(int s)
+        {
+
         }
     }
 }
