@@ -11,7 +11,7 @@ namespace _0sandXs
         // private string[,] or string[]
 
          string[] board = new string[9];
-
+         string[] c = { "O", "X" };
 
 
         public Board()
@@ -36,107 +36,36 @@ namespace _0sandXs
             Console.WriteLine(board[6] + "|" + board[7] + "|" + board[8]);
         }
 
-       // public bool addCounter(int player, int position)
-       // {
-          //  int x;
-          //  Console.WriteLine("where to place marker");
-         //   x = Convert.ToInt32(Console.ReadLine());
-        //    board[position] = Player.Character;
-     //   }
+         public bool addCounter(int player, int position)
+         {
+          int x;
+          Console.WriteLine("where to place marker");
+          x = Convert.ToInt32(Console.ReadLine());
+          board[position] = c[playerNo]
+         }
 
         public int checkwin()
         {
+            int result = 4;
+            int[,] winningLines = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 0, 3, 6 }, { 1, 4, 7 }, { 2, 5, 8 }, { 0, 4, 8 }, { 2, 4, 6 } };
+            for (int x = 0; x<2; x++)
+            {
+                for (int i = 0; i < winningLines.Length; i++)
+                {
+                    if (board[winningLines[i,0]] == c[x] && board[winningLines[i,1]] == c[x] && board[winningLines[i,2]] == c[x])
+                    {
+                        result = x;
+                    }
+
+                }
+
+            }
             // 0 - no Win
             // 1- Player 1 wins
             // 2 - Player 2 wins
             // 3 - Draw
-            int x = 0;
-            
-                if (board[0] == "X" && board[4] == "X" && board[8] == "X")
-                {
-                    Console.WriteLine("player 2 wins");
-                    x = 1;
-                }
-                if (board[2] == "X" && board[4] == "X" && board[6] == "X")
-                {
-                    Console.WriteLine("player 2 wins");
-                    x = 1;
-                }
-                if (board[0] == "X" && board[3] == "X" && board[6] == "X")
-                {
-                    Console.WriteLine("player 2 wins");
-                    x = 1;
-                }
-                if (board[1] == "X" && board[4] == "X" && board[7] == "X")
-                {
-                    Console.WriteLine("player 2 wins");
-                    x = 1;
-                }
-                if (board[2] == "X" && board[5] == "X" && board[8] == "X")
-                {
-                    Console.WriteLine("player 2 wins");
-                    x = 1;
-                }
-                if (board[0] == "X" && board[1] == "X" && board[2] == "X")
-                {
-                    Console.WriteLine("player 2 wins");
-                    x = 1;
-                }
-                if (board[3] == "X" && board[4] == "X" && board[5] == "X")
-                {
-                    Console.WriteLine("player 2 wins");
-                    x = 1;
-                }
-                if (board[6] == "X" && board[7] == "X" && board[8] == "X")
-                {
-                    Console.WriteLine("player 2 wins");
-                    x = 1;
-                }
-
-
-
-                if (board[0] == "O" && board[4] == "O" && board[8] == "O")
-                {
-                    Console.WriteLine("player 1 wins");
-                    x = 0;
-                }
-                if (board[2] == "O" && board[4] == "O" && board[6] == "O")
-                {
-                    Console.WriteLine("player 1 wins");
-                    x = 0;
-                }
-                if (board[0] == "O" && board[3] == "O" && board[6] == "O")
-                {
-                    Console.WriteLine("player 1 wins");
-                    x = 0;
-                }
-                if (board[1] == "O" && board[4] == "O" && board[7] == "O")
-                {
-                    Console.WriteLine("player 1 wins");
-                    x = 0;
-                }
-                if (board[2] == "O" && board[5] == "O" && board[8] == "O")
-                {
-                    Console.WriteLine("player 1 wins");
-                    x = 0;
-                }
-                if (board[0] == "O" && board[1] == "O" && board[2] == "O")
-                {
-                    Console.WriteLine("player 1 wins");
-                    x = 0;
-                }
-                if (board[3] == "O" && board[4] == "O" && board[5] == "O")
-                {
-                    Console.WriteLine("player 1 wins");
-                    x = 0;
-                }
-                if (board[6] == "O" && board[7] == "O" && board[8] == "O")
-                {
-                    Console.WriteLine("player 1 wins");
-                    x = 0;
-                }
-            
-            return x;
+               
+            return result;
 
         }
 

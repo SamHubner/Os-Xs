@@ -9,20 +9,11 @@ namespace _0sandXs
     {
         public string Character;
         static int number = 0;
-
+        int playerNo;
 
         public string newPerson()
         {
             int playerNo = number;
-
-            if(playerNo == 0)
-            {
-                Character = "O";
-            }
-            if (playerNo == 1)
-            {
-                Character = "X";
-            }
 
             number = number++;
             return Character;
