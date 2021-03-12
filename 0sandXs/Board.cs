@@ -38,10 +38,7 @@ namespace _0sandXs
 
          public bool addCounter(int player, int position)
          {
-          int x;
-          Console.WriteLine("where to place marker");
-          x = Convert.ToInt32(Console.ReadLine());
-          board[position] = c[playerNo]
+            if (player == 0) board[position] = "X"; else board[position] = "O";
          }
 
         public int checkwin()
