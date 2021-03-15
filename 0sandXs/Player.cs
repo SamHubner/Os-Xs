@@ -19,9 +19,5 @@ namespace _0sandXs
             return Character;
         }
 
-        public int move(int s)
-        {
-
-        }
     }
 }

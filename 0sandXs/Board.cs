@@ -13,19 +13,12 @@ namespace _0sandXs
          string[] board = new string[9];
          string[] c = { "O", "X" };
 
-
         public Board()
         {
-            
             for(int x = 0; x<9; x = x + 1)
             {
                 board[x] = " ";
             }
-
-            board[0] = "O";
-            board[4] = "O";
-            board[8] = "O";
-
         }
 
 
@@ -36,24 +29,33 @@ namespace _0sandXs
             Console.WriteLine(board[6] + "|" + board[7] + "|" + board[8]);
         }
 
-         public bool addCounter(int player, int position)
+         public string[] addCounter(int player, int position)
          {
-            if (player == 0) board[position] = "X"; else board[position] = "O";
+            int x = 0;
+            if (player == 0) board[position] = "O"; else board[position] = "X";
+            displayBoard();
+            player = x;
+            checkWin(x);
+            
+            return board;
          }
 
-        public int checkwin()
+        public int checkWin(int x)
         {
             int result = 4;
             int[,] winningLines = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 0, 3, 6 }, { 1, 4, 7 }, { 2, 5, 8 }, { 0, 4, 8 }, { 2, 4, 6 } };
-            for (int x = 0; x<2; x++)
+            for (int x = 0; x<2; x=x+1)
             {
-                for (int i = 0; i < winningLines.Length; i++)
+                for (int i = 0; i < winningLines.Length/3; i=i+1)
                 {
                     if (board[winningLines[i,0]] == c[x] && board[winningLines[i,1]] == c[x] && board[winningLines[i,2]] == c[x])
                     {
                         result = x;
                     }
-
+                    else
+                    {
+                        result = 4;
+                    }
                 }
 
             }

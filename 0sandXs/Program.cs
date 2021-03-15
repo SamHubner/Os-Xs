@@ -7,7 +7,6 @@ namespace _0sandXs
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
               Board one = new Board();
             one.displayBoard();
@@ -15,11 +14,18 @@ namespace _0sandXs
             Player a = new Player();
             Player b = new Player();
 
+
+
+            one.addCounter(0, 0);
+
+            one.addCounter(0, 4);
+
+            one.addCounter(0, 8);
+
+
+            one.checkWin();
             a.newPerson();
             b.newPerson();
-
-            one.checkwin();
-
         }
     }
 }
