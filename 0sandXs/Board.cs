@@ -31,16 +31,14 @@ namespace _0sandXs
 
          public string[] addCounter(int player, int position)
          {
-            int x = 0;
             if (player == 0) board[position] = "O"; else board[position] = "X";
             displayBoard();
-            player = x;
-            checkWin(x);
+            checkWin();
             
             return board;
          }
 
-        public int checkWin(int x)
+        public int checkWin()
         {
             int result = 4;
             int[,] winningLines = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 0, 3, 6 }, { 1, 4, 7 }, { 2, 5, 8 }, { 0, 4, 8 }, { 2, 4, 6 } };
@@ -51,6 +49,7 @@ namespace _0sandXs
                     if (board[winningLines[i,0]] == c[x] && board[winningLines[i,1]] == c[x] && board[winningLines[i,2]] == c[x])
                     {
                         result = x;
+                        Console.WriteLine("player " + x + " wins");
                     }
                     else
                     {

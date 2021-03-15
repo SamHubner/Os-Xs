@@ -16,14 +16,14 @@ namespace _0sandXs
 
 
 
-            one.addCounter(0, 0);
+            one.addCounter(1, 0);
 
-            one.addCounter(0, 4);
+            one.addCounter(1, 4);
 
-            one.addCounter(0, 8);
+            one.addCounter(1, 8);
 
 
-            one.checkWin();
+
             a.newPerson();
             b.newPerson();
         }
